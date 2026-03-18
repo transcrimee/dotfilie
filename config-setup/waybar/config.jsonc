@@ -88,36 +88,5 @@
             "format": "|",
             "tooltip": false
         },
-        "group/expand": {
-            "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": 600,
-                "transition-to-left": true,
-                "click-to-reveal": true
-            },
-            "modules": ["custom/expand", "custom/colorpicker","cpu","memory","temperature","custom/endpoint"],
-        },
-        "custom/colorpicker": {
-            "format": "{}",
-            "return-type": "json",
-            "interval": "once",
-            "exec": "/scripts/colorpicker.sh -j",
-            "on-click": "/scripts/colorpicker.sh",
-            "signal": 1
-        },
-        "cpu": {
-            "format": "󰻠",
-            "tooltip": true
-        },
-        "memory": {
-            "format": ""
-        },
-        "temperature": {
-            "critical-threshold": 80,
-            "format": "",
-        },
-        "tray": {
-            "icon-size": 14,
-            "spacing": 10
-        },
+       
 } 

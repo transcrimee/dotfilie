@@ -10,41 +10,49 @@ window#waybar{
 .modules-left {
     padding:7px;
     margin:10 0 5 10;
-    border-radius:10px;
-    background: alpha(darkmagenta,.6);
+    border-radius:5px;
+    background: alpha(rgb(0, 0, 0),.6);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border: solid white 1px;
 }
 .modules-center {
     padding:7px;
     margin:10 0 5 0;
-    border-radius:10px;
-    background: alpha(darkmagenta,.6);
+    border-radius: 5px;
+    background: alpha(rgb(0, 0, 0),.6);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border: solid white 1px;
 }
 .modules-right {
     padding:7px;
     margin: 10 10 5 0;
-    border-radius:10px;
-    background: alpha(darkmagenta,.6);
+    border-radius:5px;
+    background: alpha(rgb(0, 0, 0),.6);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    border: solid white 1px;
 }
-tooltip {
+.tooltip {
     background:@background;
     color:rgb(255, 141, 161);
 }
 #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
     transition: all .3s ease;
-    color:purple;
+    color:rgb(255, 255, 255);
+    text-shadow: 0 0 2px #ffffff;
+    
 }
 #custom-notification {
     padding: 0px 5px;
     transition: all .3s ease;
-    color:rgb(255, 141, 161);
+    color: rgb(235, 235, 235);
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 }
 #clock{
     padding: 0px 5px;
-    color:rgb(255, 141, 161);
+    color: rgb(235, 235, 235);
     transition: all .3s ease;
+    text-shadow: 0 0 2px rgb(235, 235, 235);
+    
 }
 #custom-pacman{
     padding: 0px 5px;
@@ -58,8 +66,9 @@ tooltip {
 #workspaces button {
     all:unset;
     padding: 0px 5px;
-    color: alpha(pink,.4);
+    color: alpha(rgb(235, 235, 235),.4);
     transition: all .2s ease;
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 }
 #workspaces button:hover {
     color:rgba(0,0,0,0);
@@ -68,14 +77,16 @@ tooltip {
     transition: all 1s ease;
 }
 #workspaces button.active {
-    color:rgb(255, 141, 161);
+    color:rgb(255, 255, 255);
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
 }
 #workspaces button.empty {
-    color: rgba(0,0,0,0);
+    color: rgba(39, 39, 39, 0.669);
     border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+    text-shadow: 0 0 2px rgba(39, 39, 39, 0.669);
 }
 #workspaces button.empty:hover {
     color: rgba(0,0,0,0);
@@ -84,35 +95,41 @@ tooltip {
     transition: all 1s ease;
 }
 #workspaces button.empty.active {
-    color: rgb(255, 141, 161);
+    color: rgb(255, 255, 255);
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 }
 #bluetooth{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:rgb(255, 141, 161);
+    color:rgb(235, 235, 235);
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 
 }
 #network{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:rgb(255, 141, 161);
+    color:rgb(235, 235, 235);
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 
 }
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:pink;
+    color:rgb(235, 235, 235);
+    text-shadow: 0 0 2px rgb(235, 235, 235);
 
 
 }
 #battery.charging {
-    color: #26A65B;
+    color: #5effa1;
+    text-shadow: 0 0 2px #5effa1;
 }
 
 #battery.warning:not(.charging) {
-    color: #ffbe61;
+    color: #ff9500;
+    text-shadow: 0 0 2px #ff9500;
 }
 
 #battery.critical:not(.charging) {
@@ -129,26 +146,21 @@ tooltip {
 }
 #custom-expand{
     padding: 0px 5px;
-    color:alpha(darkmagenta,.2);
+    color:alpha(rgb(0, 0, 0),.2);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
     transition: all .3s ease; 
+    border: solid white 1px;
 }
 #custom-expand:hover{
     color:rgba(255,255,255,.2);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
+    border: solid white 1px;
 }
-#custom-colorpicker{
-    padding: 0px 5px;
-}
-#cpu,#memory,#temperature{
-    padding: 0px 5px;
-    transition: all .3s ease; 
-    color:pink;
 
-}
 #custom-endpoint{
-    color:darkmagenta;
+    color:rgb(0, 0, 0);
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+    border: solid white 1px;
 
 }
 #tray{
